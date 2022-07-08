@@ -1,0 +1,17 @@
+Comparator:
+
+*.it is present in java.util package.
+*.it defines two methods 
+    1)public int compare(Object obj1,Object obj2)
+     *.return -ve iff obj1 has to come before obj2.
+     *.return +ve iff obj1 has to come after obj2 . 
+     *.return 0 iff obj1 and obj2  are equals.
+
+    2)public boolean equals(Object obj)
+
+*.whenever we are "comparator" interface  compulsory we should provide implementation only for "compare()"
+ method and we are not required provied implentation for "equals()" method because it is already avialable
+ to our class from "Object" class through  inheritance.
+
+write a program to insert int object into to "TreeSet" where the sorting order is decending order.
+

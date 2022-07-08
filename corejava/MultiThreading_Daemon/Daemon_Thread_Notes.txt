@@ -1,0 +1,60 @@
+Daemon Thread:
+The thread which are exicuting in the background are called daemon threads.
+ex.
+1)garbage collector.
+2)signal dispatcher.
+3)attach listener.
+etc.
+
+the main objective of daemon thread is to provide supprt for non daemon thread (main thread).
+ex:-
+    if main thread runs with low memory then jvm runs garbage collector to destroy useless
+    objects so that no of bytes of free memmory will be improved, with this free memory
+    main thread can continue its exicution.
+
+usally daemon thread having low priority but based on our requirment daemon thread can run with high priority also.
+
+we can check daemon nature of a thread by using "isDaemon" Method of Thread class
+public boolean isDaemon()
+we can change Daemon nature of thread by using "setDaemon" Method of Thread class
+public void setDaemon(boolean b)
+
+but changing daemon nature is possible before starting of a thread only.after starting a thread if we are trying to change daemon nature we will
+get runtime exception IllegalThreadStateException
+
+*.Default nature of Thread:
+
+ by default main thread is always non daemon and for all remaining thread daemon nature will be inherited from parent to chlid that is
+ if parent thread is daemon then automatically chlid thread also daemon.
+ if parent thread is non-daemon then automatically chlid thread also non-daemon.
+
+ *.It is impossible to change daemon nature of main thread, because  it is already started by JVM at begining .
+ 
+ *.whenever last daemon thread terminats automatically all daemon threads will be terminated irespective their position.
+ 
+ 
+ *.java Multithreading concept is implementing by using the following two models:
+ 1) Green Thread Model
+ 2) Native os model
+ 
+1) Green Thread Model:
+ The thread which is managed completely by JVM without taking underlying OS Support is call green thread.
+ 
+ very few OS like SOn So,laries provide support for green thread model
+ any way green thread model deprecated and not recomomded to use.
+ 
+ 2)Native os model:
+ The thread which is managed  by the JVM with the help of underlying OS Support is call Native os model. 
+ all windows based OS provide Support for Native os model.
+ 
+ *.How to stop a thread ?
+ ->using Stop().
+ but Stop()  deprecated by sunmicro System and not recomomded to use.
+ 
+ *.explain suspend() and resume()..?
+ We can suspend a thread suspend() method of a thread class then the will be entered into suspened state
+ we can resume a suspened thread by using resume() method of a thread class then suspened thread can 
+ continue its exicution.
+ but suspend() and resume() deprecated by sun micro System and not recomomded to use.
+
+

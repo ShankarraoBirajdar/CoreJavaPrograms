@@ -1,0 +1,98 @@
+Collection:
+
+If we want to respersent a group of individual objects as single entity then we should go for Collection.
+
+Collection Framework:
+
+it contains several classes and interfaces which can be used to represent a group of individual objects as single entity.
+
+9 Key Inerfaces of Collection Framework:
+1.Collection 
+2.List 
+3.Set
+4.SortedSet 
+5.NavigableSet
+6.Queue 
+7.Map
+8.SortedMap
+9.NavigableMap
+
+1)Collection(I):
+*.comes java version 1.2
+*.If we want to respersent a group of individual objects as single entity then we should go for Collection.
+*.It defines most the common methods which are applicable for any collection objects.
+*.in general collection interface is considered as root interface of collection framework.
+*.Their is no concreat class which implement collection interface directly.
+
+*.Difference Between Collection and Collections  ?
+Collection is an Interface and Collections is a class present java.util Package
+Collections define several utility method for Collection objectss(like sorting ,seraching etc.)
+
+2)List(I):
+*.comes java version 1.2
+*.it is the child interface of collection
+*.if we want to represent a group of individual objects as single entity where duplicates are allowed and insertion order must be preserved then we go for List.
+*.implement class of List(I)
+1)ArrayList ->comes java version 1.2
+2)LinkedList ->comes java version 1.2
+3)Vector->Stack ->*.comes java version 1.0  also called Legacy class
+
+note:
+in 1.2 version Vector and Stack classes are modified to implement List Interface.
+
+3.Set(I):
+*.comes java version 1.2	
+*.it is the child interface of collection.
+*.if we want to represent a group of individual objects as single entity where duplicates are not allowed and insertion order not required then we should go for Set(I).
+ 1)HashSet(1.2) ->LinkedHashSet(1.4)
+
+4)SortedSet(I):
+*.comes java version 1.2
+*.it is the child interface of Set.
+*.if we want to represent a group of individual objects as single entity where duplicates are not allowed and all objects should be insertion according to some sorting order then we should go for SortedSet(I).
+
+5.NavigableSet(I):
+
+*.comes java version 1.6
+*.it is the child interface of SortedSet it contains several methods for Navigation Purpose.
+  1)TressSet(1.2)
+
+6.Queue(I):
+*.comes java version 1.5
+*.it is the child interface of collection.
+*.if we want to represent a group of individual objects prior to processing then we should go for Queue(I).
+*.usually Queue Follows FIFO order but based on our requirment we can implement our own priority order also.
+ex.before sending a mail all mail id we have store in some data structure,in which order we add mail id in the order only mail should delivered
+   for this requirment Queue is best choice.
+1)PriorityQueue.
+2)BlockingQueue.
+   i)PriorityBlockingQueue.
+  ii)LinkedBlockingQueue.
+
+7)Map(I):
+note: All the above interfaces (Collection,List,Set,SortedSet,NavigableSet,Queue) ment for repersenting a group of individual objects
+*.If we want a group objects as Key Value pairs then we should go for Map(I).
+*.Map is not child interface of collection.
+1)HashMap(1.2)->LinkedHashMap(1.4)
+2)WeakHashMap(1.2)
+3)IdentityHashMap(1.4)
+4)Hashtable(1.0) extends Dictionary(AC)->Properties it is a Legacy Class.
+
+8.SortedMap(I):
+*.comes java version 1.2
+*.it is the child interface of Map(I).
+*.if we want to represent a group of Key Value pairs according to some sorting order of Keys then we should go for SortedMap(I).
+*.In SortedMap the Sorting Should be Based On Key But not Based on Value.
+
+9.NavigableMap(I):
+*.comes java version 1.6
+*.it is the child interface of SortedMap(I).
+*.It defines sevral methods for navigation purpose.
+*.implement class of NavigableMap is
+ 1) TreeMap(1.2).
+
+
+
+
+
+

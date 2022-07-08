@@ -1,0 +1,4 @@
+*.Thread Group:
+       Based on functionality we can group thread into a single unit which nothing but thread group.
+       i.e thread group contains group of thread 
+       and threads group can also contains sub thread groups.

@@ -1,4 +1,4 @@
-package com.hp.shankar.corejava;
+package com.hp.shankar.corejavaPrograms;
 
 public class Fibonacci {
 
