@@ -1,4 +1,4 @@
-package Abstraction_program;class Addition
+package Abstract;class Addition
 {
 	int add(int a,int b)
 	{

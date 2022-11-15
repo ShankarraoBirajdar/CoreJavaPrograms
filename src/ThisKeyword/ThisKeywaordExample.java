@@ -1,4 +1,4 @@
-package com.hp.shankar.corejavaPrograms;
+package ThisKeyword;
 
 public class ThisKeywaordExample {
 

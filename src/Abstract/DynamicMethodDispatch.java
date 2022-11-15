@@ -1,4 +1,4 @@
-package Abstraction_program;
+package Abstract;
 class SuperClass
 {
 	

@@ -1,4 +1,4 @@
-package Abstraction_program;
+package Abstract;
 class Base
 {
 	void show(String s)
@@ -14,7 +14,7 @@ class Derived extends Base
 	}
 }
 
-public class OverloadingInDifferentClass {
+public class OverridingInDifferentClass {
 
 	public static void main(String[] args)
 	{
