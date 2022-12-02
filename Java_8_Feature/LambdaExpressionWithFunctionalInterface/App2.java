@@ -1,4 +1,4 @@
-package LambdaExpression;
+package LambdaExpressionWithFunctionalInterface;
 
 
 //Functional Interface With Inheritance

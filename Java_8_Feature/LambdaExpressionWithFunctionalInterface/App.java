@@ -1,4 +1,4 @@
-package LambdaExpression;
+package LambdaExpressionWithFunctionalInterface;
 
 //It it a Anonymous Function
 //Not Having Name
