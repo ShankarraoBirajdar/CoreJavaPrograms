@@ -12,7 +12,10 @@ class Adapter{
 	public void m2() {
 		Vehical interf= () -> {
 				int x=999;
+				int y=777;
+				System.out.println(x);//999
 				System.out.println(this.x);//888
+				System.out.println(y);//777
 				
 			};
 

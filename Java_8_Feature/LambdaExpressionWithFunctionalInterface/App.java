@@ -13,6 +13,7 @@ package LambdaExpressionWithFunctionalInterface;
 //To indicate explicitly functional interface use above annotation @FunctionalInterface
 @FunctionalInterface
 interface ZeroParameter{
+	//only one abstract method
 	public abstract void zeroParam();
 	
 	//Any No of Default Method is Allowed
@@ -28,11 +29,13 @@ interface ZeroParameter{
 
 @FunctionalInterface
 interface OneParameter{
+	//only one abstract method with one param
 	public abstract int oneParam(String str);
 }
 
 @FunctionalInterface
 interface MultipleParameters {
+	//only one abstract method  with two param
 	public abstract void multiParam(int a, int b);
 }
 
@@ -46,11 +49,11 @@ public class App  {
 		ZeroParameter zeroParameter = () -> System.out.println("Zero parameter ");
 		zeroParameter.zeroParam();
 		
-		zeroParameter.defaultMethod();
-		ZeroParameter.staticMethod();
+		zeroParameter.defaultMethod();//calling by reference/class object
+		ZeroParameter.staticMethod();//calling by Class name because its static
 		
 		OneParameter oneParameter = (p) -> {System.out.println("One parameter: " + p); return p.length();};
-		oneParameter.oneParam("Shankar");
+		System.out.println(oneParameter.oneParam("Shankar"));
 		
 		MultipleParameters ab = (a, b)->System.out.println(a+b);
 		ab.multiParam(10, 20);
