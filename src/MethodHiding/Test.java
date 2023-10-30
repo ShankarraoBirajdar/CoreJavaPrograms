@@ -2,12 +2,14 @@ package MethodHiding;
 
 class Parent {
 	public static void methodOne() {
+		int a = 20;
 		System.out.println("parent class");
 	}
 }
 
 class Child extends Parent {
 	public static void methodOne() {
+		int a = 30;
 		System.out.println("child class");
 	}
 }
