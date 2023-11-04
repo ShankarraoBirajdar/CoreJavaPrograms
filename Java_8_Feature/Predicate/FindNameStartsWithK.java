@@ -1,5 +1,9 @@
 package Predicate;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.TreeSet;
 import java.util.function.Predicate;
 
 public class FindNameStartsWithK {
@@ -14,8 +18,6 @@ public class FindNameStartsWithK {
 		
 		System.out.println("Name Starts Not With K");
 		find(predicate.negate(), strArr);
-		
-
 	}
 	
 	public static void find(Predicate<String> predicate, String[] strArr) {
