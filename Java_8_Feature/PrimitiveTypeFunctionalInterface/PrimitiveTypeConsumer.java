@@ -24,7 +24,7 @@ public class PrimitiveTypeConsumer {
 //		IntConsumer
 //		 void accept(int value);
 		
-//		LongtConsumer
+//		LongConsumer
 //		void accept(long value);
 		
 //		DoubleConsumer

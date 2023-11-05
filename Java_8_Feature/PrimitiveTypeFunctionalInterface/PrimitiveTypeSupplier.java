@@ -35,7 +35,7 @@ public class PrimitiveTypeSupplier {
 		//IntSupplier   int getAsInt();
 		//LongSupplier
 		//DoubleSupplier
-		//BooleantSupplier
+		//BooleanSupplier
 
 	}
 
