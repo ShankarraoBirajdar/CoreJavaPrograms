@@ -1,6 +1,5 @@
 package FactoryMethodForCreatingUnmodifiableCollections;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Example4 {
