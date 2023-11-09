@@ -1,6 +1,7 @@
 package Streams;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,17 +16,22 @@ public class SortedExamplesApp {
 		numbers.add(5);
 		numbers.add(15);
 		numbers.add(25);
-		
-		System.out.println("numbers: "+numbers);
-		//Default natural sorting order
+
+		System.out.println("numbers: " + numbers);
+		// Default natural sorting order
 		List<Integer> sortedNumbers = numbers.stream().sorted().collect(Collectors.toList());
+
+		System.out.println("List according to default sorting order: " + sortedNumbers);
+
+		// reverseOrder
+		List<Integer> reverseOrder = numbers.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+		System.out.println("Reverse Order: " + reverseOrder);
 		
-		System.out.println("List according to default sorting order: "+sortedNumbers);
-		
-		//Customized natural sorting order
-		List<Integer> customizedSortedNumbers = numbers.stream().sorted((I1,I2)->I2.compareTo(I1)).collect(Collectors.toList());
+		// Customized natural sorting order
+		List<Integer> customizedSortedNumbers = numbers.stream().sorted((I1, I2) -> I2.compareTo(I1))
+				.collect(Collectors.toList());
 //		List<Integer> customizedSortedNumbers = numbers.stream().sorted((I1,I2)->-I1.compareTo(I2)).collect(Collectors.toList());
-		System.out.println("List according to customized sorting order: "+customizedSortedNumbers);
+		System.out.println("List according to customized sorting order: " + customizedSortedNumbers);
 	}
 
 }
