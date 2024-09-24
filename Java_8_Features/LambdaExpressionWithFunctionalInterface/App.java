@@ -58,8 +58,8 @@ public class App  {
 		MultipleParameters ab = (a, b)->System.out.println(a+b);
 		ab.multiParam(10, 20);
 		
-//		System.out.println(addition(10, 20));
-//		System.out.println(getLength("Shankar"));		
+		System.out.println(addition(10, 20));
+		System.out.println(getLength("Shankar"));		
 	}
 
 	//Normal Function

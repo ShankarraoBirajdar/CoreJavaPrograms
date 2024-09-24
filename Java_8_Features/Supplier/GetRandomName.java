@@ -10,7 +10,12 @@ public class GetRandomName {
 		
 		Supplier<String> supplier=()->{
 			String[] name= {"Kailas", "Shankar","Priyanka","Aadi","Prajakta","Pooja","Pranita"};
-			int randomNo=(int)(Math.random()*7);
+			double random = Math.random();
+//			System.out.println(random);
+			random = random *7 ;
+//			System.out.println(random);
+			int randomNo=(int)(random);
+//			System.out.println(randomNo);
 			return name[randomNo];
 			
 		};

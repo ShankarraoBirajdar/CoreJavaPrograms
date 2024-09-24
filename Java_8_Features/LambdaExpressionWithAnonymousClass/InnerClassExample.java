@@ -12,6 +12,7 @@ class Outer{
 		int z=555;
 		public void innerMethod() {
 			System.out.println("Inner Method "+this.x+" = "+x+" = "+z);
+			System.out.println("To access Outer Class x = "+Outer.this.x+" y= "+Outer.this.y);
 		}
 	}
 }

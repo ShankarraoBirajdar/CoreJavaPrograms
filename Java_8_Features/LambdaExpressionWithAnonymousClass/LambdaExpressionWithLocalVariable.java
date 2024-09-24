@@ -11,7 +11,7 @@ public class LambdaExpressionWithLocalVariable {
 		int localVaribale = 20;
 		InterfaceDemo i = () -> {
 			instanceVaribale = 30;
-			//localVaribale = 40;//CE: Local variable localVaribale defined in an enclosing scope must be final or effectively final
+//			localVaribale = 40;//CE: Local variable localVaribale defined in an enclosing scope must be final or effectively final
 			System.out.println(instanceVaribale);
 			System.out.println(localVaribale);
 		};

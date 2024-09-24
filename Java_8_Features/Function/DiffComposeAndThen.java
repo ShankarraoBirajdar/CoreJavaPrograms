@@ -8,7 +8,7 @@ public class DiffComposeAndThen {
 		//Addition Code
 		Function<Integer,Integer> function1=I->I+I;
 		
-		//Cude Code
+		//Cube Code
 		Function<Integer,Integer> function2=I->I*I*I;
 
 		System.out.println(function1.apply(2));

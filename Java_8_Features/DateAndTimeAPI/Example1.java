@@ -16,6 +16,10 @@ public class Example1 {
 		// to get current system time
 		LocalTime time = LocalTime.now();
 		System.out.println(time);
+		
+		//to get both
+		LocalDateTime dateTime = LocalDateTime.now();
+		System.out.println(dateTime);
 	}
 
 }

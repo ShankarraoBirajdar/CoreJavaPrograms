@@ -13,7 +13,12 @@ public class OTPGenerate {
 	public static String generateOtp() {
 		
 		Supplier<Integer> supplier=()->{
-			int randomNo=(int)(Math.random()*10);
+			double random = Math.random();
+//			System.out.println(random);
+			random = random *10 ;
+//			System.out.println(random);
+			int randomNo=(int)(random);
+//			System.out.println(randomNo);
 			return randomNo;
 			
 		};
@@ -23,6 +28,7 @@ public class OTPGenerate {
 		for (int i = 0; i < 6; i++) {
 			 otp = otp+supplier.get();
 		}
+		otp = otp+supplier.get();
 
 		return otp;
 	}

@@ -11,6 +11,11 @@ public class FindFirstAndAnyExample {
 		vehicleList.stream().findAny().ifPresent(System.out::println);
 		
 		vehicleList.stream().findFirst().ifPresent(System.out::println);
+		
+		int[] arr = {5,2,8,3,1,1};
+     int a = Arrays.stream(arr).distinct().sorted().skip(1).findFirst().orElseThrow(()-> new IllegalArgumentException("Array doesnt have the smallest element"));
+     System.out.println(a);
+
 
 	}
 

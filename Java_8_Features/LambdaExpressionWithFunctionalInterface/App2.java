@@ -3,9 +3,9 @@ package LambdaExpressionWithFunctionalInterface;
 
 //Functional Interface With Inheritance
 
-//Case 1: If Parent Functional Interface Contain One Method and Child Functional Interface contain no Method - its Allowed
-//Case 2: Parent Functional Interface Method name and Child Functional Interface Method Signature and type should be same
-//Case 3 Parent Functional Interface Method name and Child Functional Interface Method Signature and type is not Matching - its Not Allowed
+//Case 1: If Parent Functional Interface Contain One abstract Method and Child Functional Interface contain no abstract Method - its Allowed
+//Case 2: Parent Functional Interface abstract Method name, Signature and type should be same in Child Functional Interface Method   - its Allowed
+//Case 3 Parent Functional Interface abstract Method name, Signature and type should not Matching with Child Functional Interface - its Not Allowed
 @FunctionalInterface
 interface Parent{
 	public abstract void m1();
