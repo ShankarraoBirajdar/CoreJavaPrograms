@@ -3,6 +3,7 @@ package StreamAPIEnhancements;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class TakeWhileExample {
@@ -26,8 +27,8 @@ public class TakeWhileExample {
 		System.out.println(evenNo3);
 		
 		//1.8v iterate method with 2 arg
-		Stream.iterate(1, x->x+1).limit(5).forEach(System.out::println);
-		
+		Stream.iterate(1, x->x+=1).limit(5).forEach(i->System.out.print(i+" "));
+		System.out.println();
 		//1.9v iterate method with 3 arg
 		Stream.iterate(11,x->x<=55, x->x+11).forEach(System.out::println);
 		

@@ -11,7 +11,12 @@ public class FunctionChainExample {
 		Function<String,String> function1=s->s.toUpperCase();
 		
 		//Name Substring Code
-		Function<String,String> function2=s->s.substring(0, 10);//0 to 8
+		Function<String,String> function2=s->{
+			
+			 s=s.substring(0, 10);
+			 s="_"+s+"_";
+			 return s;
+		};//0 to 8
 		
 		String name="ShankarraoBirajdar";
 		

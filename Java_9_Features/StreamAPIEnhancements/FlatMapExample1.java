@@ -37,6 +37,16 @@ public class FlatMapExample1 {
 		}).collect(Collectors.toList());
 		System.out.println(list2);
 
+		
+		List<Integer> number1 = Arrays.asList(1, 2, 3, 4, 5, 6);
+		List<Integer> number2 = Arrays.asList(1, 2, 3, 4, 5, 6);
+		
+		List<List<Integer>> numberList = Arrays.asList(number1,number2);
+		System.out.println(numberList);
+		
+		List<Integer> out=numberList.stream().flatMap(s->s.stream()).collect(Collectors.toList());
+		System.out.println(out);
+
 	}
 
 }

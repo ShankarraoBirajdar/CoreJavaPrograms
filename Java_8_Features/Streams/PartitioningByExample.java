@@ -13,8 +13,11 @@ public class PartitioningByExample {
 		Map<Boolean, List<Integer>> map = numbers.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
 		System.out.println(map);
 
-		Map<Boolean, Long> map2 = numbers.stream().collect(Collectors.partitioningBy(num -> (num > 3), Collectors.counting()));
+		Map<Boolean, List<Integer>> map2 = numbers.stream().collect(Collectors.partitioningBy(num -> (num > 3)));
 		System.out.println(map2);
+		
+		Map<Boolean, Long> map3 = numbers.stream().collect(Collectors.partitioningBy(num -> (num > 3), Collectors.counting()));
+		System.out.println(map3);
 
 	}
 

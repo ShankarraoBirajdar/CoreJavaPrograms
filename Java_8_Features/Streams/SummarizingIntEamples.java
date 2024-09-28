@@ -16,6 +16,11 @@ public class SummarizingIntEamples {
 		
 		
 		System.out.println(statistics);
+		System.out.println(statistics.getCount());
+		System.out.println(statistics.getSum());
+		System.out.println(statistics.getMin());
+		System.out.println(statistics.getMax());
+		System.out.println(statistics.getAverage());
 
 	}
 

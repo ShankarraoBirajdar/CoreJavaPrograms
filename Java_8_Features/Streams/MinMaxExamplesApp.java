@@ -22,13 +22,18 @@ public class MinMaxExamplesApp {
 
 		// min
 		Integer min = numbers.stream().min((I1, I2) -> I1.compareTo(I2)).get();
+		
+		Integer min2 = numbers.stream().min((I1, I2) -> (I1<I2)?-1:(I1>I2)?1:0).get();
 
 		System.out.println("Minimum  Value : " + min);
+		System.out.println("Minimum  Value : " + min2);
 
 		// max
 		Integer max = numbers.stream().max((I1, I2) -> I1.compareTo(I2)).get();
+		Integer max2 = numbers.stream().max((I1, I2) -> (I1<I2)?-1:(I1>I2)?1:0).get();
 
 		System.out.println("Maximum  Value : " + max);
+		System.out.println("Maximum  Value : " + max2);
 
 	}
 

@@ -18,14 +18,20 @@ public class ArmStrongIO {
 		    temp=n;  
 		    while(n>0)  
 		    {  
-		    a=n%10;  
+		    a=n%10; 
+//		    System.out.println(a);
+//		    System.out.println(n);
 		    n=n/10;  
+		    System.out.println(n);
 		    int sum=1;
 		    for(int i=0;i<x;i++)
 			{
 			sum=sum*a;
+//			System.out.println(sum);
 		    }
 		    c=c+(sum);  
+//		    System.out.println(c);
+		    System.out.println("----------");
 		     }  
 		    if(temp==c)  
 		    System.out.println("armstrong number");   

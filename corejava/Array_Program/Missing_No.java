@@ -20,6 +20,7 @@ public class Missing_No {
 
 		for (b = 0; b < n; b++) {
 
+			System.out.println(c+" "+a[b]);
 			if (c != a[b]) {
 				do {
 					System.out.println("missing no-->" + c);

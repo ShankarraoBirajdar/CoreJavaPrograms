@@ -20,7 +20,7 @@ public class BycompareToMethod {
 		   System.out.println(s1.compareTo(s2));//0  
 		   System.out.println(s1.compareTo(s3));//1(because s1>s3)  
 		   System.out.println(s3.compareTo(s1));//-1(because s3 < s1 )
-		   System.out.println(Character.getNumericValue('S')-Character.getNumericValue('R'));
+		   System.out.println(Character.getNumericValue('S')+" "+ Character.getNumericValue('R'));
 		   System.out.println(Character.getNumericValue('R')-Character.getNumericValue('S'));
 		   
 		   s1="";

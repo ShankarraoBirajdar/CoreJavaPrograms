@@ -1,5 +1,7 @@
 package Array_Program;
 
+import java.util.Arrays;
+
 public class CharacterOperation {
 
 	public static void main(String[] args)
@@ -10,7 +12,7 @@ public class CharacterOperation {
 		char c4=65;
 		int x=c2.length;
 		System.out.println(x);
-		System.out.println(c+ " " +c3);
+		System.out.println(Arrays.toString(c3)+ " " +c);
 		/* we cannot print Char of array with concat " "+ use 
 		if we want to print then for loop is mandatory
 		otherwise without for loop using we try 
