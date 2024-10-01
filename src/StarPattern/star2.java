@@ -7,10 +7,10 @@ public class star2 {
 		{
 			for(int j=1;j<=5;j++)
 			{
-				System.out.print(i);
+				System.out.print(i);//numbers
 			
 			}
-		System.out.println();	
+		System.out.println();//lines
 		}
 
 	}

@@ -16,27 +16,50 @@ import java.util.stream.Stream;
 
 import InnerClass.variableAccessInnerClass;
 
+//https://github.com/rohitchavan-git/Java-8-Interview-Sample-Coding-Questions/blob/main/src/com/rohit/Sample.java
 public class InterviewExamples {
 
 	public static void main(String[] args) {
 
-//		getNoOfCharCount();
-//		findAllDuplicate();
-//		uniqueCharacters();
-//		firstNonRepeatCharacter();
-//		firstRepeatedCharacter();
-//		nThHighestNo(2);
-//		longestString();
-//		noStartsWith();
-//		reverseString();
+		getNoOfCharCount();
+		findAllDuplicate();
+		uniqueCharacters();
+		firstNonRepeatCharacter();
+		firstRepeatedCharacter();
+		nThHighestNo(2);
+		longestString();
+		noStartsWith();
+		reverseString();
 		nthHighestSalary();
-//		armstrong();
-//		palindrome();
-//		fibonacci();
-//		commonElements();
-//		printListOnLength();
-//		anagram();
-
+		armstrong();
+		palindrome();
+		fibonacci();
+		commonElements();
+		printListOnLength();
+		anagram();
+		lastElementInTheArray();
+		firstTenOddNumbers();
+	}
+	
+	public static void lastElementInTheArray() {
+		 int[] intArray = {6,0,1,2,3,4,5};
+		 
+		 IntStream.of(intArray).sorted().skip(intArray.length-1).forEach(System.out::println);
+		 
+//		 Integer lastElementInTheArray = Arrays.stream(intArray)
+//	                .boxed()
+//	                .reduce((first, second) -> second).orElse(-1);
+//	        System.out.println("\nlast elements in the array " + lastElementInTheArray);
+	}
+	
+	public static void firstTenOddNumbers() {
+		Stream.iterate(1, i->i<=20, i->i+1).filter(i->i%2!=0).forEach(i->System.out.print("Odd No's "+i+" "));
+		
+		System.out.println();
+		
+		Stream.iterate(1,i->i+2)
+        .limit(10)
+        .forEach(i->System.out.print("Odd No's "+i+" "));
 	}
 
 	public static void getNoOfCharCount() {
@@ -65,6 +88,20 @@ public class InterviewExamples {
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
 		System.out.println("All Duplicates characters:: " + allDuplicates);
+		
+		
+		List<Integer> duplicateElements = Arrays.asList(1, 2,2,2,3, 3, 4, 5,1,1,56, 7, 8, 9, 10);
+
+        System.out.println("maxed Elements " + duplicateElements);
+
+        List<Integer> extractDuplicateElements = duplicateElements.stream()
+                .filter(element -> duplicateElements.indexOf(element)
+                        != duplicateElements.lastIndexOf(element))
+                .distinct()
+                .collect(Collectors.toList());
+
+
+        System.out.println("extract duplicates elements from " + extractDuplicateElements);
 	}
 
 	public static void uniqueCharacters() {
@@ -82,10 +119,19 @@ public class InterviewExamples {
 	}
 
 	public static void firstNonRepeatCharacter() {
+
+		
+		//approch1 
+		String tempStr = "rohitrohi";
+		System.out.println("First Non Repeat Character:: "+Arrays.stream (tempStr.split (""))
+                .filter (str -> tempStr.indexOf (str) == tempStr.lastIndexOf (str))
+                .findFirst ()
+                .orElse (""));
+
+      //approch2
 		String str = "ilovejavatechie";
 
 		String[] strarray = str.split("");
-
 		Map<String, Long> length = Arrays.stream(strarray)
 				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
 
@@ -210,11 +256,12 @@ public class InterviewExamples {
 	public static void palindrome() {
 		// palindrome
 		String str = "NITIN";
-//				IntStream.range(0, str.length()/2).forEach(System.out::println);
 
+		//Approach 1
 		str.chars().mapToObj(s1 -> String.valueOf((char) s1)).reduce((s1, s2) -> s2 + s1)
 				.ifPresent(System.out::println);
 
+		//Approach 2
 		boolean isItPalindrome = IntStream.range(0, str.length() / 2).noneMatch(i -> str.charAt(i) != str.charAt(str.length() - i - 1));
 
 		if (isItPalindrome) {
@@ -223,6 +270,13 @@ public class InterviewExamples {
 			System.out.println(str + " is not a palindrome");
 		}
 		
+		//Approach 2
+		 String str1 = "momd";
+	        String temp = str1.replaceAll("\\s+", "").toLowerCase();
+	        System.out.println("is palindrome string " +IntStream.range(0, temp.length() / 2)
+	                .noneMatch(i -> temp.charAt(i) != temp.charAt(temp.length() - i - 1)));
+		
+		//Approach 3
 		int count=0;
 		int length = str.length();
 		for (int i = 0; i < length; i++) {
@@ -238,6 +292,8 @@ public class InterviewExamples {
 		} else {
 			System.out.println(str + " is not a palindrome");
 		}
+		
+
 	}
 	
 	public static void fibonacci () {

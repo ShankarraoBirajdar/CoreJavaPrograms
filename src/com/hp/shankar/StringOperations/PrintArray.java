@@ -18,6 +18,7 @@ public class PrintArray {
 		forloop(arr);
 		foreach(city);
 		ArraysToString(arr,city,dArr,fArr,cArr);
+	
 
 	}
 	
